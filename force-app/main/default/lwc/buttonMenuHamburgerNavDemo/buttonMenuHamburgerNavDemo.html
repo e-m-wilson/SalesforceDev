@@ -1,0 +1,35 @@
+<template>
+    <div class="container">
+        <div class="header">
+            <h2>Button Menu Demo</h2>
+
+            <template lwc:if={smallFormFactor}>
+                <lightning-button-menu variant="border-inverse" menu-alignment="right" icon-name="utility:rows" alternative-text="Show menu" class="btn">
+                    <lightning-menu-item onclick={menuChange} value="MenuItemOne" label="Home" data-menu="Home"></lightning-menu-item>
+                    <lightning-menu-item onclick={menuChange} value="MenuItemTwo" label="Cool Page" data-menu="Cool Page"></lightning-menu-item>
+                    <lightning-menu-item onclick={menuChange} value="MenuItemThree" label="About Us" data-menu="About Us"></lightning-menu-item>
+                </lightning-button-menu>
+            </template>
+
+            <template lwc:if={desktopFormFactor} >
+                <div class="optionContainer">
+                    <div onclick={menuChange} class="menuOption" data-menu="Home">Home</div>
+                    <div onclick={menuChange} class="menuOption" data-menu="Cool Page">Cool Page</div>
+                    <div onclick={menuChange} class="menuOption" data-menu="About Us">About Us</div>
+                </div>
+            </template>
+            
+        </div>
+        
+    
+        <template lwc:if={Home}>
+            <h1>This is the home page!</h1>
+        </template>
+        <template lwc:if={CoolPage}>
+            <h1>This is a cool page!</h1>
+        </template>
+        <template lwc:if={AboutUs}>
+            <h1>This is the about us page!</h1>
+        </template>
+    </div>
+</template>
