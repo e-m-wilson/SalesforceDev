@@ -1,7 +1,7 @@
 import { LightningElement } from 'lwc';
 import getAccs from '@salesforce/apex/AccountHelper.getAccountList';
 
-export default class Main extends LightningElement {
+export default class ImperativeApexDemo extends LightningElement {
 
    
     accList;

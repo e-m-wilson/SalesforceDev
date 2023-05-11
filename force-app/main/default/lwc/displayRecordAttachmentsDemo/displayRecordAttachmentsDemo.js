@@ -2,7 +2,7 @@ import { LightningElement } from 'lwc';
 import getImgs from '@salesforce/apex/attachementHelper.getRecordAttachments';
 import getConIdsByName from '@salesforce/apex/ContactHelper.getContactIdsByName';
 
-export default class ImageTest extends LightningElement {
+export default class DisplayRecordAttachmentsDemo extends LightningElement {
   
     imgUrlList;
     idList = [];
