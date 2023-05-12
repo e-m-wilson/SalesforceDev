@@ -49,6 +49,8 @@ export default class LwcMainExperienceSiteDemo extends LightningElement {
 
     connectedCallback() {
         window.addEventListener('resize', this.handleWindowChange);
+        /*Note that the logout will not work in the experience builder.
+        It will only work in a live and published experience site. */
         this.logoutURL = window.location.origin + '/secur/logout.jsp';
         getUserfName()
         .then((r) => {
