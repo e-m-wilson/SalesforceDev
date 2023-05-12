@@ -1,12 +1,17 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, wire } from 'lwc';
+import getUserfName from '@salesforce/apex/UserInfoHelper.getUserFirstName';
 
-export default class ButtonMenuDemo extends LightningElement {
+export default class LwcMainExperienceSiteDemo extends LightningElement {
 
     Home = true;
     CoolPage = false;
     AboutUs = false;
     smallFormFactor = true;
     desktopFormFactor = false;
+
+    
+    firstName;
+    logoutURL;
 
     menuChange(e) {
         let choice = e.target.dataset.menu;
@@ -39,10 +44,19 @@ export default class ButtonMenuDemo extends LightningElement {
                 this.AboutUs = false;
             }
         }
+        this.toggleMenu();
     }
 
     connectedCallback() {
         window.addEventListener('resize', this.handleWindowChange);
+        this.logoutURL = window.location.origin + '/secur/logout.jsp';
+        getUserfName()
+        .then((r) => {
+          this.firstName = r;
+        })
+        .catch((e) => {
+            console.log(e);
+        });
     }
 
     renderedCallback() {
@@ -58,6 +72,15 @@ export default class ButtonMenuDemo extends LightningElement {
         } else {
             this.smallFormFactor = false;
             this.desktopFormFactor = true;
+            this.toggleMenu();
+        }
+    }
+
+    toggleMenu() {
+        if(this.smallFormFactor) {
+           this.template.querySelector('.mainMenu').classList.toggle('active'); 
+        } else {
+            this.template.querySelector('.mainMenu').classList.remove('active');
         }
     }
 }

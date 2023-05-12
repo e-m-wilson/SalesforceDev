@@ -1,0 +1,60 @@
+<template>
+    <div class="container">
+
+        <div class="header">
+            <h2>Experience Site Demo</h2>
+            <div class="optionContainer">
+                <template lwc:if={desktopFormFactor}>
+                    <div onclick={menuChange} class="menuOption" data-menu="Home">Home</div>
+                    <div onclick={menuChange} class="menuOption" data-menu="Cool Page">Cool Page</div>
+                    <div onclick={menuChange} class="menuOption" data-menu="About Us">About Us</div>
+
+                    <template lwc:if={firstName}>
+                        <p class="menuOption">Hi {firstName}!</p>
+                        <a class="menuOption" href={logoutURL}>Logout?</a> 
+                    </template>
+                    <template lwc:else>
+                            <a class="menuOption" href="/login">Login/Register</a>
+                    </template> 
+                </template>
+                
+                <template lwc:if={smallFormFactor}>
+
+                    <div class="hamburger" onclick={toggleMenu}>
+                        <div class="hamburgerLine"></div>
+                        <div class="hamburgerLine"></div>
+                        <div class="hamburgerLine"></div>
+                    </div>
+                </template>
+            </div>
+        </div>
+        
+        <div class="mainMenu">
+            <div class="mainMenuContainer">
+                <div onclick={menuChange} class="menuOption" data-menu="Home">Home</div>
+                <div onclick={menuChange} class="menuOption" data-menu="Cool Page">Cool Page</div>
+                <div onclick={menuChange} class="menuOption" data-menu="About Us">About Us</div>
+
+                <template lwc:if={firstName}>
+                    <p class="menuOption">Hi {firstName}!</p>
+                    <a class="menuOption" href={logoutURL}>Logout?</a> 
+                </template>
+                <template lwc:else>
+                        <a class="menuOption" href="/login">Login/Register</a>
+                </template>  
+            </div>
+        </div>
+    
+        <template lwc:if={Home}>
+            <h1>This is the home page!</h1>
+        </template>
+        <template lwc:if={CoolPage}>
+            <h1>This is a cool page!</h1>
+        </template>
+        <template lwc:if={AboutUs}>
+            <h1>This is the about us page!</h1>
+        </template> 
+     
+        
+    </div>
+</template>
