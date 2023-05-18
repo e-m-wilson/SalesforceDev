@@ -19,13 +19,6 @@
     color: white;
 }
 
-.optionContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
 .menuOption {
     margin: 0px 10px;
     cursor: pointer;
@@ -33,15 +26,19 @@
     color: white !important;
 }
 
-.mainMenu {
+.mobileMenu {
     height: 100%;
     width: 100%;
     background-color: rgb(50, 141, 138);
     display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin:auto;
 }
 
 .active {
-    display: block;
+    display: flex;
 }
 
 .hamburger {
@@ -61,11 +58,23 @@
 
 }
 
-.mainMenuContainer {
-    display: flex;
-    flex-direction: column;
+.desktopMenu {
+    display: none;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin:auto;
 }
 
+@media all and (min-width: 700px) {
+    .desktopMenu {
+        display: flex;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: none;
+    }
+}
