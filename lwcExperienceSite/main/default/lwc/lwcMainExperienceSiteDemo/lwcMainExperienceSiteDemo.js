@@ -5,8 +5,8 @@ import getUserfName from '@salesforce/apex/UserInfoHelper.getUserFirstName';
 export default class LwcMainExperienceSiteDemo extends LightningElement {
 
     Home = true;
-    CoolPage = false;
-    AboutUs = false;
+    Locations = false;
+    Apply = false;
     
     firstName;
     logoutURL;
@@ -17,29 +17,29 @@ export default class LwcMainExperienceSiteDemo extends LightningElement {
             case 'Home':
             {
                 this.Home = true;
-                this.CoolPage = false;
-                this.AboutUs = false;
+                this.Locations = false;
+                this.Apply = false;
                 break;
             }
-            case 'Cool Page':
+            case 'Locations':
             {
                 this.Home = false;
-                this.CoolPage = true;
-                this.AboutUs = false;
+                this.Locations = true;
+                this.Apply = false;
                 break;
             }
-            case 'About Us':
+            case 'Apply':
             {
                 this.Home = false;
-                this.CoolPage = false;
-                this.AboutUs = true;
+                this.Locations = false;
+                this.Apply = true;
                 break;
             }
             default:
             {
                 this.Home = true;
-                this.CoolPage = false;
-                this.AboutUs = false;
+                this.Locations = false;
+                this.Apply = false;
             }
         }
     }
