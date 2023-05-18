@@ -65,6 +65,10 @@
     align-items: center;
 }
 
+h2, .menuOption {
+    user-select: none;
+}
+
 @media all and (min-width: 700px) {
     .desktopMenu {
         display: flex;

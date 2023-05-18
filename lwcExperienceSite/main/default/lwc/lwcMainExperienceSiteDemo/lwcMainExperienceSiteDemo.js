@@ -1,5 +1,6 @@
-import { LightningElement, wire } from 'lwc';
+import { LightningElement } from 'lwc';
 import getUserfName from '@salesforce/apex/UserInfoHelper.getUserFirstName';
+
 
 export default class LwcMainExperienceSiteDemo extends LightningElement {
 

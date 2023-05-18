@@ -1,12 +1,12 @@
 <template>
-    <div class="container">
-        <lightning-input class="input" label="Account Search"></lightning-input>
-        <lightning-button onclick={handleSearch} class="btn" label="Search"></lightning-button>
+    
+    <lightning-input class="input" label="Account Search"></lightning-input>
+    <lightning-button onclick={handleSearch} class="btn" label="Search"></lightning-button>
 
-        <template lwc:if={accList}>
-            <template for:each={accList} for:item="acc">
-                <p class="p" key={acc.id} data-id={acc.Id} onclick={handleIt}>{acc.Name}'s annual revenue: {acc.AnnualRevenue}</p>
-            </template>
+    <template lwc:if={accList}>
+        <template for:each={accList} for:item="acc">
+            <p class="p" key={acc.id} data-id={acc.Id} onclick={handleIt}>{acc.Name}'s annual revenue: {acc.AnnualRevenue}</p>
         </template>
-    </div>
+    </template>
+   
 </template>
