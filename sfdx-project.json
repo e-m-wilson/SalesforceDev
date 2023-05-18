@@ -3,10 +3,21 @@
     {
       "path": "force-app",
       "default": true
+    },
+    {
+      "path": "lwcExperienceSite",
+      "package": "lwcExperienceSite",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": ""
     }
   ],
   "name": "SalesforceDev",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "57.0"
+  "sourceApiVersion": "57.0",
+  "packageAliases": {
+    "lwcExperienceSite": "0Ho8b000000TNB1CAO"
+  }
 }

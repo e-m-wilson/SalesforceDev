@@ -1,13 +1,16 @@
 <template>
-    <div class="container">
-        <h2>Search for a contact and then see the contact record's attached images.</h2>
-        <lightning-input class="input" type="text" label="Enter Contact Name"></lightning-input>
-        <lightning-button variant="brand" onclick={search} label="Search Contact Images"></lightning-button>
-        
+    
+    <h2>Search for a contact and then see the contact record's attached images.</h2>
+    <lightning-input class="input" type="text" label="Enter Contact Name"></lightning-input>
+    <lightning-button variant="brand" onclick={search} label="Search Contact Images"></lightning-button>
+    
+    <div class="imageGallery">
         <template lwc:if={imgUrlList}>
             <template for:each={imgUrlList} for:item="img">
                 <img key={img.Id} src={img.VersionDataUrl}/> 
             </template> 
-        </template> 
+        </template>  
     </div>
+        
+   
 </template>

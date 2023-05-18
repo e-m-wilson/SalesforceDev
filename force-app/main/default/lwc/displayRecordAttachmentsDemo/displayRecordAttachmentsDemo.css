@@ -1,4 +1,3 @@
-.container {
-    background-color: white;
-    padding: 40px;
+.input {
+    max-width: 300px;
 }

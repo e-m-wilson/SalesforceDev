@@ -50,12 +50,18 @@
     
         <template lwc:if={Home}>
             <h1>This is the home page!</h1>
+            <p>This site demonstrates some of the things we can do with LWC, Apex, and 
+                digital experiences with Salesforce!
+            </p>
         </template>
         <template lwc:if={CoolPage}>
-            <h1>This is a cool page!</h1>
+            <h1>This page highlights some components that do moderately neat things.</h1>
+            <c-display-record-attachments-demo></c-display-record-attachments-demo>
+            <c-imperative-apex-demo></c-imperative-apex-demo>
         </template>
         <template lwc:if={AboutUs}>
             <h1>This is the about us page!</h1>
+            <p>Hey! You're pretty cool!</p>
         </template> 
      
         

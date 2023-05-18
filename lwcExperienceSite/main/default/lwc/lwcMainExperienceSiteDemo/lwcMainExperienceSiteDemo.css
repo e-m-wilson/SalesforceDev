@@ -17,7 +17,6 @@
     align-items: center;
     width: 100%;
     color: white;
-    position: relative;
 }
 
 .optionContainer {
@@ -35,14 +34,14 @@
 }
 
 .mainMenu {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: rgb(50, 141, 138);
     display: none;
 }
 
 .active {
-    display: flex;
+    display: block;
 }
 
 .hamburger {
