@@ -1,7 +1,8 @@
-public with sharing class attachementHelper {
+public without sharing class attachementHelper {
     public attachementHelper() {
 
     }
+
 
 
 /* This takes in any object recordIds and then retreives png or jpg files stored as attachements on the records. */

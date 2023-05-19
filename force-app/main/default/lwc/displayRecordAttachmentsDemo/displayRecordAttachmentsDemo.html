@@ -9,6 +9,7 @@
             <template for:each={imgUrlList} for:item="img">
                 <div key={img.Id} class="slds-col">
                     <img src={img.VersionDataUrl}/> 
+                    <a href={img.VersionDataUrl}>img link</a>
                 </div>
             </template> 
         </template>  

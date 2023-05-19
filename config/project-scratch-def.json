@@ -1,7 +1,7 @@
 {
   "orgName": "Demo company",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "features": ["EnableSetPasswordInApi", "Communities"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
@@ -15,6 +15,9 @@
       "sessionSettings": {
         "forceRelogin": false
       }
+    },
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
     }
   }
 }

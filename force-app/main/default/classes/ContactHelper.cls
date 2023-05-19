@@ -1,9 +1,9 @@
-public with sharing class ContactHelper {
+public without sharing class ContactHelper {
     public ContactHelper() {
 
     }
 
-    @AuraEnabled
+    @AuraEnabled(cacheable=true)
     public static List<Contact> getContactIdsByName(String q){
         try {
             String sanitizedQuery = String.escapeSingleQuotes(q);
