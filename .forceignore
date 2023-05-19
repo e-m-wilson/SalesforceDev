@@ -11,5 +11,24 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-# ingnore mocks
+# Ignore mocks
 **/lwc_custom_mocks/**
+
+# Ignore unrelated stuff
+**/appMenus/**
+**/audience/**
+**/components/**
+**/digitalExperienceConfigs/**
+**/digitalExperiences/**
+**/navigationMenus/**
+**/networkBranding/**
+**/networks/**
+**/sites/**
+**/profiles/**
+**/roles/**
+
+# Ignore Temporarily (depends on what I'm doing)
+**/pages/**
+**/classes/**
+**/aura/**
+**/staticresources/**

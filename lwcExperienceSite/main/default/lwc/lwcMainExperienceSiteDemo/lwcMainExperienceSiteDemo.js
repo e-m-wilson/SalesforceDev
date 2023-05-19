@@ -1,13 +1,13 @@
 import { LightningElement } from 'lwc';
 import getUserfName from '@salesforce/apex/UserInfoHelper.getUserFirstName';
-
+import isGuest from '@salesforce/user/isGuest';
 
 export default class LwcMainExperienceSiteDemo extends LightningElement {
 
     Home = true;
     Locations = false;
     Apply = false;
-    
+    guest = isGuest;
     firstName;
     logoutURL;
 

@@ -1,4 +1,4 @@
-public with sharing class UserInfoHelper {
+public without sharing class UserInfoHelper {
     public UserInfoHelper() {
 
     }

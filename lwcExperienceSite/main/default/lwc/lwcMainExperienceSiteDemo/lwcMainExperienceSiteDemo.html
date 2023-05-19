@@ -9,15 +9,15 @@
                     <div onclick={menuChange} class="menuOption" data-menu="Locations">Locations</div>
                     <div onclick={menuChange} class="menuOption" data-menu="Apply">Apply</div>
 
-                    <template lwc:if={firstName}>
+                    <template lwc:if={guest}>
+                        <a class="menuOption" href="/login">Login/Register</a>
+                    </template>
+                    <template lwc:else>
                         <p class="menuOption">Hi {firstName}!</p>
 
                         <!--Note that the logout will not work in the experience builder.
                         It will only work in a live and published experience site.-->
                         <a class="menuOption" href={logoutURL}>Logout?</a> 
-                    </template>
-                    <template lwc:else>
-                            <a class="menuOption" href="/login">Login/Register</a>
                     </template> 
                 </div>
                     
@@ -35,12 +35,15 @@
             <div onclick={mobileMenuChange} class="menuOption" data-menu="Locations">Locations</div>
             <div onclick={mobileMenuChange} class="menuOption" data-menu="Apply">Apply</div>
 
-            <template lwc:if={firstName}>
-                <p class="menuOption">Hi {firstName}!</p>
-                <a class="menuOption" href={logoutURL}>Logout?</a> 
+            <template lwc:if={guest}>
+                <a class="menuOption" href="/login">Login/Register</a>
             </template>
             <template lwc:else>
-                    <a class="menuOption" href="/login">Login/Register</a>
+                <p class="menuOption">Hi {firstName}!</p>
+
+                <!--Note that the logout will not work in the experience builder.
+                It will only work in a live and published experience site.-->
+                <a class="menuOption" href={logoutURL}>Logout?</a> 
             </template>  
           
         </div>
@@ -49,7 +52,7 @@
            home
         </template>
         <template lwc:if={Locations}>
-            locations
+            <c-display-record-attachments-demo></c-display-record-attachments-demo>
         </template>
         <template lwc:if={Apply}>
             apply
