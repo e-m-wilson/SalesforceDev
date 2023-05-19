@@ -13,5 +13,5 @@
         <enabled>true</enabled>
     </classAccesses>
     <hasActivationRequired>false</hasActivationRequired>
-    <label>Guest User Perm Set</label>
+    <label>Registered_xp_Site_User</label>
 </PermissionSet>
