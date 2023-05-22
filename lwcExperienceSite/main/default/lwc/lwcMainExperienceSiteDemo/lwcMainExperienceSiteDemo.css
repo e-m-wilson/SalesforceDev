@@ -1,3 +1,5 @@
+@import 'c/styleResource';
+
 .container {
     background-color: white;
     display: flex;
@@ -8,8 +10,13 @@
     
 }
 
+.content {
+    margin-top: 8vh;
+    width: 80%;
+}
+
 .header {
-    background-color: rgb(50, 141, 138);
+    background-color: var(--main-bg-color);
     padding: 30px;
     display: flex;
     flex-direction: row;
@@ -29,7 +36,7 @@
 .mobileMenu {
     height: 100%;
     width: 100%;
-    background-color: rgb(50, 141, 138);
+    background-color: var(--main-bg-color);
     display: none;
     flex-direction: column;
     justify-content: space-around;

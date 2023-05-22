@@ -11,6 +11,7 @@
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Property Management</label>
     <navType>Standard</navType>
+    <setupExperience>all</setupExperience>
     <tabs>standard-Location</tabs>
     <tabs>Residence__c</tabs>
     <uiType>Lightning</uiType>

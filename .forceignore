@@ -29,6 +29,6 @@ package.xml
 
 # Ignore Temporarily (depends on what I'm doing)
 **/pages/**
-**/classes/**
+#**/classes/**
 **/aura/**
 **/staticresources/**

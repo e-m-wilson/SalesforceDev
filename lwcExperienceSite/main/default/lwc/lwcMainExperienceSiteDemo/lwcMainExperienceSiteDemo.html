@@ -48,15 +48,28 @@
           
         </div>
     
-        <template lwc:if={Home}>
-           home
-        </template>
-        <template lwc:if={Locations}>
-            <c-display-record-attachments-demo></c-display-record-attachments-demo>
-        </template>
-        <template lwc:if={Apply}>
-            apply
-        </template> 
+        <div class="content slds-grid slds-gutters slds-wrap">
+
+            <template lwc:if={Home}>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_8-of-12">
+                    <c-locations homepage="true"></c-locations>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_4-of-12">
+                    <c-tour-form></c-tour-form>
+                </div>
+            </template>
+            <template lwc:if={Locations}>
+                <div class="slds-col">
+                    <c-locations homepage="false"></c-locations>
+                </div>
+            </template>
+            <template lwc:if={Apply}>
+                <div class="slds-col">
+                    <c-application-page></c-application-page>
+                </div>
+            </template> 
+        </div>
+        
      
         
     </div>
