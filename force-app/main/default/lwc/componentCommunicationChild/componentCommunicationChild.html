@@ -1,0 +1,10 @@
+<template>
+        <div class="container">
+                <p>The red border, and everything inside, is the child component. Here is the message from the parent component:</p>
+                <p>{message}</p>     
+
+                <hr>
+                <h2>Click the button to send data from the child component to the parent:</h2>
+                <lightning-button label="Click me!" onclick={handleClick} variant="brand"></lightning-button>
+        </div>
+</template>

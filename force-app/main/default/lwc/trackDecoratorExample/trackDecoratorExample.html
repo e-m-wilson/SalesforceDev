@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <ul>
+            <template for:each={fruits} for:item='fruit'>
+                <li key={fruit}>{fruit}</li>
+            </template>
+        </ul>
+        <br>
+        <ul>
+            <template for:each={vegetables} for:item='vegetable'>
+                <li key={vegetable}>{vegetable}</li>
+            </template>
+        </ul>
+        <button onclick={handleButtonClick}>Add a fruit and vegetable</button>
+    </lightning-card>
+</template>

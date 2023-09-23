@@ -1,0 +1,7 @@
+<template>
+    <template lwc:if={accountInfo}>
+        <template for:each={accountInfo} for:item="acc">
+            <p key={acc.id}>{acc.Name} annual revenue: {acc.AnnualRevenue}</p> 
+        </template>
+    </template>
+</template>
