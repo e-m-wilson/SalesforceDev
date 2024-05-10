@@ -1,4 +1,15 @@
 <template>
-    <c-lms-example-component-one></c-lms-example-component-one>
-    <c-lms-example-component-two></c-lms-example-component-two>
+
+  
+  <div style="height: 300px;">
+    <lightning-datatable
+        data={results.data}
+        columns={columns}
+        key-field="Id"
+        onrowselection={getSelectedIds}
+    >
+    </lightning-datatable>
+</div>
+
+<lightning-button label="Mark all selected as High Priority" onclick={changePriority} variant="brand"></lightning-button>
 </template>

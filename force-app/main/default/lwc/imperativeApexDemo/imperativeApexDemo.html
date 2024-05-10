@@ -5,8 +5,12 @@
 
     <template lwc:if={accList}>
         <template for:each={accList} for:item="acc">
-            <p class="p" key={acc.id} data-id={acc.Id} onclick={handleIt}>{acc.Name}'s annual revenue: {acc.AnnualRevenue}</p>
+            <p class="p" key={acc.id}>{acc.Name}'s annual revenue: {acc.AnnualRevenue}</p>
         </template>
     </template>
    
+    <lightning-button onclick={handleClick} label="Print UserName"></lightning-button>
+    <template lwc:if={userName}>
+        {userName}
+    </template>
 </template>

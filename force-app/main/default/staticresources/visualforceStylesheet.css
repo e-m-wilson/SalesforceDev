@@ -1,0 +1,9 @@
+.btn {
+    height: 40px;
+    width: 100px;
+    background-color: rgb(165, 165, 255);
+}
+
+[id*=myPageBlock] {
+    background-color: red;
+}

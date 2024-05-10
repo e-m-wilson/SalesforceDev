@@ -1,0 +1,45 @@
+<template>
+    <div class="container">
+       <h2>Provide an Account record ID here (if component not placed on record page):</h2>
+        <lightning-input
+        type="text"
+        label="RecordID"
+        onchange={handleRecordId}></lightning-input>
+
+        <h2>Lightning Record View Form Example:</h2>
+        <template lwc:if={recordId}>
+            <lightning-record-view-form
+                object-api-name={objectApiName}
+                record-id={recordId}
+            >
+            <lightning-output-field field-name={nameField}> </lightning-output-field>
+            </lightning-record-view-form>
+        </template>
+        <template lwc:else>
+            <lightning-record-view-form
+                object-api-name={objectApiName}
+                record-id={manualRecordId}
+            >
+            <lightning-output-field field-name={nameField}> </lightning-output-field>
+            </lightning-record-view-form>
+        </template> 
+
+        <h2>Lightning Record Edit Form Example:</h2>
+        <template lwc:if={recordId}>
+            <lightning-record-edit-form
+                object-api-name={objectApiName}
+                record-id={recordId}
+            >
+            <lightning-input-field field-name={nameField}> </lightning-input-field>
+            </lightning-record-edit-form>
+        </template>
+        <template lwc:else>
+            <lightning-record-edit-form
+                object-api-name={objectApiName}
+                record-id={manualRecordId}
+            >
+            <lightning-input-field field-name={nameField}> </lightning-input-field>
+            </lightning-record-edit-form>
+        </template> 
+    </div>
+</template>

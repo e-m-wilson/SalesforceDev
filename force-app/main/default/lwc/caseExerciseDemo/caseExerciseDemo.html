@@ -1,0 +1,32 @@
+<template>
+    <h2>Create new Cases:</h2>
+    <lightning-record-edit-form
+    object-api-name={objectApiName}
+    onsuccess={handleRecordSave}>
+        <lightning-input-field field-name={subject}></lightning-input-field>
+        <lightning-input-field field-name={description}></lightning-input-field>
+        <lightning-input-field field-name={priority}></lightning-input-field>
+        <lightning-input-field field-name={origin}></lightning-input-field>
+        <lightning-input-field field-name={accountLookupField}></lightning-input-field>
+
+        <lightning-button variant="brand" type="submit" label="Save New Record"></lightning-button>
+    </lightning-record-edit-form>
+
+    <h2>Existing High Priority Cases:</h2>
+    <template lwc:if={caseList.data}>
+        <template for:each={caseList.data} for:item="caseRecord">
+            <lightning-card key={caseRecord.Id}>
+                <lightning-record-view-form
+                object-api-name={objectApiName}
+                record-id={caseRecord.Id}>
+                <lightning-output-field field-name={subject}></lightning-output-field>
+                <lightning-output-field field-name={status}></lightning-output-field>
+                <lightning-output-field field-name={description}></lightning-output-field>
+                <lightning-output-field field-name={priority}></lightning-output-field>
+                <lightning-output-field field-name={origin}></lightning-output-field>
+                <lightning-output-field field-name={accountLookupField}></lightning-output-field>
+            </lightning-record-view-form>
+            </lightning-card>
+        </template>
+    </template>
+</template>

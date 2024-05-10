@@ -1,6 +1,6 @@
 import { LightningElement } from 'lwc';
 import getImgs from '@salesforce/apex/attachementHelper.getRecordAttachments';
-import getConIdsByName from '@salesforce/apex/ContactHelper.getContactIdsByName';
+import getConIdsByName from '@salesforce/apex/ContactHelper.getContactIdByName';
 
 export default class DisplayRecordAttachmentsDemo extends LightningElement {
   

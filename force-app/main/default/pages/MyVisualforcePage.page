@@ -1,0 +1,15 @@
+<apex:page standardController="Case" extensions="MyVisualforceExtension">
+    <apex:form>
+        <apex:pageBlock>
+            <apex:pageBlockSection>
+                <apex:inputField value="{!Case.CaseNumber}"/>
+                <apex:inputField value="{!Case.Reason}"/>
+                <apex:inputField value="{!Case.Description}"/>
+                <apex:inputField value="{!Case.Origin}"/>
+                <apex:inputField value="{!Case.Status}"/>
+            </apex:pageBlockSection>
+            <apex:commandButton action="{!quicksave}" value="Save"/>
+            <apex:commandButton action="{!markCaseAsHighPriority}" value="Mark as High Priority"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

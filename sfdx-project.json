@@ -2,21 +2,21 @@
   "packageDirectories": [
     {
       "path": "force-app",
-      "default": false
+      "default": true
     },
     {
       "path": "lwcExperienceSite",
       "package": "lwcExperienceSite",
       "versionName": "ver 0.1",
       "versionNumber": "0.1.0.NEXT",
-      "default": true,
+      "default": false,
       "versionDescription": ""
     }
   ],
   "name": "SalesforceDev",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "57.0",
+  "sourceApiVersion": "60.0",
   "packageAliases": {
     "lwcExperienceSite": "0Ho8b000000TNB1CAO"
   }

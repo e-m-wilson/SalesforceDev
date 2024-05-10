@@ -1,0 +1,35 @@
+<apex:page controller="visualforceCustomController">
+
+<apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            
+            <apex:pageBlockTable value="{!accounts}" var="acc">
+                <apex:column headerValue="Account Name">
+                    <apex:commandLink action="{!goToAccount}" value="{!acc.name}">
+                        <apex:param name="accId" value="{!acc.id}" assignTo="{!accId}"/>
+                    </apex:commandLink>
+                    
+                </apex:column>
+                <apex:column headerValue="Annual Revenue">
+                    <apex:outputField value="{!acc.annualRevenue}">
+                        <apex:inlineEditSupport showOnEdit="updateRecords"/>
+                    </apex:outputField>
+                </apex:column>
+                <apex:column value="{!acc.industry}"/>
+                <apex:column >
+                    <apex:commandLink value="Delete" action="{!deleteRecord}">
+                        <apex:param name="accId" value="{!acc.Id}" assignTo="{!accId}"/>
+                    </apex:commandLink>
+                </apex:column>
+            </apex:pageBlockTable>
+            
+        </apex:pageBlockSection>
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Previous" action="{!previous}"/>
+            <apex:commandButton value="Next" action="{!next}"/>
+            <apex:commandButton value="Update Records" action="{!save}" style="display:none" id="updateRecords"/>
+        </apex:pageBlockButtons>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

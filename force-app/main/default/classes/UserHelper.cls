@@ -1,5 +1,6 @@
 public with sharing class UserHelper {
     
+    @AuraEnabled(cacheable=true)
     public static String getName() {
         return UserInfo.getName();
     }

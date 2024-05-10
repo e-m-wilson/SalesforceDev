@@ -3,7 +3,7 @@ public with sharing class AccountHelper {
 
     }
 
-    @AuraEnabled
+    @AuraEnabled(cacheable=true)
     public static List<Account> getAccountList(String query){
         try {
             String sanitizedQ = String.escapeSingleQuotes(query);
@@ -14,10 +14,21 @@ public with sharing class AccountHelper {
         }
     }
 
-    @AuraEnabled
+    @AuraEnabled(cacheable=true)
     public static List<Account> getAllAccounts(){
         try {
             return [SELECT Name, AnnualRevenue FROM Account];
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
+
+    @AuraEnabled
+    public static void setAccountRatingToHot(String AccId){
+        try {
+            Account acc = [SELECT Id, Rating FROM Account WHERE Id = :AccId];
+            acc.Rating = 'Hot';
+            update acc;
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
         }
