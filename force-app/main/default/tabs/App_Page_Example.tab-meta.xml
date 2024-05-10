@@ -2,6 +2,6 @@
 <CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Created by Lightning App Builder</description>
     <flexiPage>My_App_Page</flexiPage>
-    <label>My App Page</label>
+    <label>App Page Example</label>
     <motif>Custom99: CRT TV</motif>
 </CustomTab>

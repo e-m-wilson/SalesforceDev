@@ -26,6 +26,10 @@ package.xml
 **/sites/**
 **/profiles/**
 **/roles/**
+**/dashboards/**
+**/reports/**
+**/reportTypes/**
+
 
 # Ignore Temporarily (depends on what I'm doing)
 #**/pages/**
