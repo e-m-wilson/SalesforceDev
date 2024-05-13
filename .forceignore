@@ -18,11 +18,10 @@ package.xml
 **/appMenus/**
 **/audience/**
 **/components/**
-**/digitalExperienceConfigs/**
-**/digitalExperiences/**
+
 **/navigationMenus/**
 **/networkBranding/**
-**/networks/**
+
 **/sites/**
 **/profiles/**
 **/roles/**
@@ -30,9 +29,12 @@ package.xml
 **/reports/**
 **/reportTypes/**
 
-
 # Ignore Temporarily (depends on what I'm doing)
-#**/pages/**
-#**/classes/**
-#**/aura/**
-#**/staticresources/**
+**/pages/**
+**/classes/**
+**/aura/**
+**/staticresources/**
+
+**/digitalExperienceConfigs/**
+**/digitalExperiences/**
+**/networks/**

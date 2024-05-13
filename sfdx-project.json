@@ -1,15 +1,19 @@
 {
   "packageDirectories": [
     {
-      "path": "force-app",
-      "default": true
+      "path": "examples",
+      "default": false,
+      "package": "examples",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "versionDescription": ""
     },
     {
       "path": "lwcExperienceSite",
       "package": "lwcExperienceSite",
       "versionName": "ver 0.1",
       "versionNumber": "0.1.0.NEXT",
-      "default": false,
+      "default": true,
       "versionDescription": ""
     }
   ],
@@ -18,6 +22,7 @@
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "60.0",
   "packageAliases": {
-    "lwcExperienceSite": "0Ho8b000000TNB1CAO"
+    "lwcExperienceSite": "0Ho8b000000TNB1CAO",
+    "examples": "0Ho8b000000PB0lCAG"
   }
 }

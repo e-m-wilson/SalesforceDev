@@ -9,11 +9,17 @@
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Property Management</label>
     <navType>Standard</navType>
     <setupExperience>all</setupExperience>
+    <tabs>standard-home</tabs>
     <tabs>standard-Location</tabs>
     <tabs>Residence__c</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Account</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Property_Management_UtilityBar</utilityBar>
 </CustomApplication>

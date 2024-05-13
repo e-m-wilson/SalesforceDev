@@ -6,6 +6,7 @@
                         <apex:actionSupport event="onchange" rerender="list"/>
                         <apex:selectOptions value="{!listviewoptions}"/>
             </apex:selectList>
+            
             <apex:pageBlockSection >
                 <apex:pageBlockTable value="{!accs}" var="acc" id="list">
                     <apex:column >
