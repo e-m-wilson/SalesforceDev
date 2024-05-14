@@ -44,7 +44,10 @@ public with sharing class visualforceCustomController {
                 accToDelete = acc;
             }
         } 
-        delete accToDelete;
+        
+            delete accToDelete;
+        
+        
         ssc = null;
         this.getAccounts();
     }

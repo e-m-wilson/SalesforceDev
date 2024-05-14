@@ -13,6 +13,14 @@
       "package": "lwcExperienceSite",
       "versionName": "ver 0.1",
       "versionNumber": "0.1.0.NEXT",
+      "default": false,
+      "versionDescription": ""
+    },
+    {
+      "path": "force-app",
+      "package": "force-app",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
       "default": true,
       "versionDescription": ""
     }
@@ -23,6 +31,9 @@
   "sourceApiVersion": "60.0",
   "packageAliases": {
     "lwcExperienceSite": "0Ho8b000000TNB1CAO",
-    "examples": "0Ho8b000000PB0lCAG"
+    "examples": "0Ho8b000000PB0lCAG",
+    "force-app": "0Ho8b000000PB0qCAG",
+    "force-app@0.1.0-3": "04t8b000000uXeNAAU",
+    "force-app@0.1.0-4": "04t8b000000uXeSAAU"
   }
 }

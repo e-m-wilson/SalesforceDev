@@ -7,10 +7,11 @@ export default class WireServiceExample extends LightningElement {
     allAccountsFromWiredFunction;
     error;
     myQuery;
+    allAccounts;
 
     // Wire service with property syntax. 
-    @wire(getAccountList, {query : '$myQuery'})
-    allAccounts;
+    // @wire(getAccountList, {query : '$myQuery'})
+    // allAccounts;
 
     // Wire service with function syntax. 
     @wire(getAllAccounts)
@@ -30,5 +31,10 @@ export default class WireServiceExample extends LightningElement {
     handleQuery(){
         let q = this.template.querySelector('.input').value;
         this.myQuery = q;
+
+        getAccountList({query: q})
+        .then(result => {
+            this.allAccounts = result;
+        })
     }
 }

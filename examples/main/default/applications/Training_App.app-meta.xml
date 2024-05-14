@@ -19,14 +19,16 @@
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Training App</label>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
-    <tabs>standard-AnalyticsDataManager</tabs>
     <tabs>Training__c</tabs>
     <tabs>Course__c</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
+    <tabs>Visualforce_Standard_Controller_Example</tabs>
+    <tabs>Visualforce_Custom_Controller_Example</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Training_App_UtilityBar</utilityBar>
 </CustomApplication>
