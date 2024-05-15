@@ -3,11 +3,11 @@
     <lightning-button variant="brand" label="Search" onclick={handleQuery}></lightning-button>
     
     <h2>This data table uses the wire service with property syntax. And it gets record data via a reactive property!</h2>
-    <template lwc:if={allAccounts}>
+    <template lwc:if={allAccounts.data}>
         <lightning-datatable
                         hide-checkbox-column
                         key-field="id"
-                        data={allAccounts}
+                        data={allAccounts.data}
                         columns={columns}>
                 </lightning-datatable>
         </template>
