@@ -1,6 +1,7 @@
 <template>
     <lightning-card>
-        <c-api-decorator-example-child message="Hello Earth!"></c-api-decorator-example-child>
+        <lightning-input type="text" class="input" onchange={handleChange}></lightning-input>
+        <c-api-decorator-example-child message={input}></c-api-decorator-example-child>
         <c-api-decorator-example-child message="Hello Mars!"></c-api-decorator-example-child>
     </lightning-card>
     

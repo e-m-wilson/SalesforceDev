@@ -1,6 +1,7 @@
 public with sharing class visualforceCustomController {
 
     public ID accId{get; set;}
+    public List<Account> accounts;
     
     public ApexPages.StandardSetController ssc {
         get {
@@ -45,7 +46,10 @@ public with sharing class visualforceCustomController {
             }
         } 
         
+        if(Schema.SObjectType.Case.isDeletable()) {
             delete accToDelete;
+        }
+        
         
         
         ssc = null;

@@ -31,6 +31,7 @@
                 record-id={recordId}
             >
             <lightning-input-field field-name={nameField}> </lightning-input-field>
+            <lightning-button variant="brand" type="submit" label="Save"></lightning-button>
             </lightning-record-edit-form>
         </template>
         <template lwc:else>
@@ -39,7 +40,30 @@
                 record-id={manualRecordId}
             >
             <lightning-input-field field-name={nameField}> </lightning-input-field>
+            <lightning-button variant="brand" type="submit" label="Save"></lightning-button>
             </lightning-record-edit-form>
+        </template> 
+
+        <h2>Lightning Record Form Example:</h2>
+        <template lwc:if={recordId}>
+            <lightning-record-form
+                object-api-name={objectApiName}
+                record-id={recordId}
+                layout-type="Full"
+                mode="view"
+            >
+            <lightning-input-field field-name={nameField}> </lightning-input-field>
+            </lightning-record-form>
+        </template>
+        <template lwc:else>
+            <lightning-record-form
+                object-api-name={objectApiName}
+                record-id={manualRecordId}
+                layout-type="Full"
+                mode="view"
+            >
+            <lightning-input-field field-name={nameField}> </lightning-input-field>
+            </lightning-record-form>
         </template> 
     </div>
 </template>

@@ -28,4 +28,6 @@ export default class LmsExampleComponentTwo extends LightningElement {
       connectedCallback() {
         this.subscribeToMessageChannel();
       }
+
+      
 }
