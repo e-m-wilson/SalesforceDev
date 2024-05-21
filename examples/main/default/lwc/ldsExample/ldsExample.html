@@ -59,7 +59,8 @@
             <lightning-record-form
                 object-api-name={objectApiName}
                 record-id={manualRecordId}
-                layout-type="Full"
+                fields={fields}
+                onsuccess={handleSuccess}
                 mode="view"
             >
             <lightning-input-field field-name={nameField}> </lightning-input-field>

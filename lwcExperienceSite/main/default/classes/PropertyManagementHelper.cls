@@ -3,7 +3,7 @@ public with sharing class PropertyManagementHelper {
 
     }
     @AuraEnabled(cacheable=true)
-    public static List<Residence__c> getAllLocationNamesWithVacantResidences(){
+    public static List<Residence__c> getAllResidencesWithVacancies(){
         try {
             return [SELECT Name, Is_Vacant__c, Location__r.Name, Location__c FROM Residence__c WHERE Is_Vacant__c = true];
         } catch (Exception e) {

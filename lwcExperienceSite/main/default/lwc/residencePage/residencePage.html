@@ -1,0 +1,12 @@
+<template>
+    <template lwc:if={recordId}>
+        <lightning-record-view-form
+        object-api-name={objectApiName}
+        record-id={recordId}
+        >
+        <lightning-output-field field-name={numberOfBaths}> </lightning-output-field>
+        <lightning-output-field field-name={numberOfBedrooms}> </lightning-output-field>
+        <lightning-output-field field-name={hasGarage}> </lightning-output-field>
+        </lightning-record-view-form>    
+    </template>
+</template>

@@ -3,7 +3,7 @@ import getNonHighPriorityCases from '@salesforce/apex/CaseHelper.getNonHighPrior
 import markAsHighPriority from '@salesforce/apex/CaseHelper.markAsHighPriority';
 import { refreshApex } from '@salesforce/apex';
 
-export default class Main extends LightningElement {
+export default class RefreshApexExample extends LightningElement {
 
     @wire(getNonHighPriorityCases)
     results;
