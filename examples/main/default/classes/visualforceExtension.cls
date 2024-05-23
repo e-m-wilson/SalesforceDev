@@ -1,7 +1,7 @@
-public with sharing class visualforceExtension {
+public with sharing class VisualforceExtension {
 
     ApexPages.StandardSetController sd;
-    public visualforceExtension(ApexPages.StandardSetController controller) {
+    public VisualforceExtension(ApexPages.StandardSetController controller) {
         
         sd = controller;
         sd.setPageSize(5);

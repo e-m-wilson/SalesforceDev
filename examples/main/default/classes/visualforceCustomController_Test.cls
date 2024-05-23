@@ -1,8 +1,8 @@
 @isTest
-public with sharing class visualforceCustomController_Test {
+public with sharing class VisualforceCustomController_Test {
     
     
-    public visualforceCustomController_Test() {
+    public VisualforceCustomController_Test() {
        
     }
 
@@ -18,7 +18,7 @@ public with sharing class visualforceCustomController_Test {
 
     @isTest
     public static void testPagination() {
-        visualforceCustomController vcc = new visualforceCustomController();
+        VisualforceCustomController vcc = new VisualforceCustomController();
         vcc.next();
 
         List<Account> accList = vcc.getAccounts();
@@ -31,10 +31,10 @@ public with sharing class visualforceCustomController_Test {
 
     @isTest
     public static void testRecordPage() {
-        PageReference pageRef = Page.visualforceAccountRecordPage;
+        PageReference pageRef = Page.VisualforceAccountRecordPage;
         Test.setCurrentPage(pageRef);
         
-        visualforceCustomController vcc = new visualforceCustomController();
+        VisualforceCustomController vcc = new VisualforceCustomController();
         List<Account> accList = [SELECT ID FROM Account WHERE Name = 'testAcc0'];
         ApexPages.currentPage().getParameters().put('id', accList[0].id);
 

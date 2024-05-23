@@ -1,4 +1,4 @@
-public with sharing class PropertyManagementHelper {
+public without sharing class PropertyManagementHelper {
     public PropertyManagementHelper() {
 
     }

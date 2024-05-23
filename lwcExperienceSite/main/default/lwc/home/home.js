@@ -1,7 +1,7 @@
 import { LightningElement, track, wire } from 'lwc';
 import getAllVacantResidences from '@salesforce/apex/PropertyManagementHelper.getAllResidencesWithVacancies';
 import { NavigationMixin } from 'lightning/navigation';
-import isGuest from '@salesforce/user/isGuest';
+
 
 export default class Home extends NavigationMixin(LightningElement) {
 

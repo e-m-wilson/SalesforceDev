@@ -1,4 +1,4 @@
-<apex:page standardController="Account" recordSetVar="accs" extensions="visualforceExtension">
+<apex:page standardController="Account" recordSetVar="accs" extensions="VisualforceExtension">
     <apex:stylesheet value="{!$Resource.visualforceStylesheet}"/>
     <apex:form >
         <apex:pageBlock id="myPageBlock">

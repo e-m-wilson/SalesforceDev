@@ -1,5 +1,5 @@
-public with sharing class apexSecurityExample {
-    public apexSecurityExample() {
+public with sharing class ApexSecurityExample {
+    public ApexSecurityExample() {
 
     }
 

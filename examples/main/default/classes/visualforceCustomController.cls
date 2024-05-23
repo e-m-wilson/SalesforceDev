@@ -1,4 +1,4 @@
-public with sharing class visualforceCustomController {
+public with sharing class VisualforceCustomController {
 
     public ID accId{get; set;}
     public List<Account> accounts;
@@ -31,7 +31,7 @@ public with sharing class visualforceCustomController {
     }
 
     public PageReference goToAccount() {
-        PageReference pr = Page.visualforceAccountRecordPage;
+        PageReference pr = Page.VisualforceAccountRecordPage;
         pr.getParameters().put('id', this.accId);
         return pr;
     }

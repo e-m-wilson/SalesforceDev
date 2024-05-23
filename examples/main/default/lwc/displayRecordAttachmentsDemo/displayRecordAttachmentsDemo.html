@@ -1,14 +1,14 @@
 <template>
     
-    <h2>Search for a contact and then see the contact record's attached images.</h2>
-    <lightning-input class="input" type="text" label="Enter Contact Name"></lightning-input>
-    <lightning-button variant="brand" onclick={search} label="Search Contact Images"></lightning-button>
+    <h2>Search for a recordId and then see the record's attached images.</h2>
+    <lightning-input class="input" type="text" label="Enter Record Id"></lightning-input>
+    <lightning-button variant="brand" onclick={search} label="Search Record Id"></lightning-button>
     
     <div class="slds-grid slds-gutters slds-wrap">
         <template lwc:if={imgUrlList}>
             <template for:each={imgUrlList} for:item="img">
                 <div key={img.Id} class="slds-col">
-                    <img src={img.VersionDataUrl}/> 
+                    <img src={img.VersionDataUrl}> 
                     <a href={img.VersionDataUrl}>img link</a>
                 </div>
             </template> 
