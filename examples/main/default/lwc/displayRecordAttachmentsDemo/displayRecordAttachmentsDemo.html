@@ -7,10 +7,25 @@
     <div class="slds-grid slds-gutters slds-wrap">
         <template lwc:if={imgUrlList}>
             <template for:each={imgUrlList} for:item="img">
-                <div key={img.Id} class="slds-col">
-                    <img src={img.VersionDataUrl}> 
-                    <a href={img.VersionDataUrl}>img link</a>
-                </div>
+
+                <!--
+                    A custom field was placed on the 'Content Version' 
+                    object (Main_Display_Image__c). Custom fields added to this 
+                    object will appear on 'Content Document' objects in 
+                    Salesforce (i.e. record attachments). 
+
+                    Here we are using a custom checkbox field to determine if 
+                    we should render the image or not. This allows us to filter 
+                    the records that should render to the user. 
+                -->
+                <template lwc:if={img.Main_Display_Image__c}>
+                    <div key={img.Id} class="slds-col">
+                        <p>{img.Title}</p>
+                        <img src={img.VersionDataUrl}> 
+                        <a href={img.VersionDataUrl}>img link</a>
+                    </div>    
+                </template>
+                
             </template> 
         </template>  
     </div>

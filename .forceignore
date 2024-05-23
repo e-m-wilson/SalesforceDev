@@ -29,12 +29,15 @@ package.xml
 **/reports/**
 **/reportTypes/**
 **/translations/**
+**/profilePasswordPolicies/**
+**/profileSessionSettings/**
+**/sharingRules/**
 
 # Ignore Temporarily (depends on what I'm doing)
-#**/pages/**
-#**/classes/**
+**/pages/**
+**/classes/**
 **/aura/**
-#**/staticresources/**
+**/staticresources/**
 
 **/digitalExperienceConfigs/**
 **/digitalExperiences/**

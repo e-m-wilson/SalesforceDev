@@ -32,7 +32,7 @@ public static List<ContentVersion> getRecordAttachments(String recordId){
             cdlIdList.add(cdl.ContentDocument.LatestPublishedVersionId);
         }
         Set<String> fileTypes = new Set<String>{'jpg', 'png'};
-        return [SELECT VersionDataUrl, FileType FROM ContentVersion WHERE Id IN :cdlIdList AND FileType IN :fileTypes];
+        return [SELECT Title, Main_Display_Image__c, VersionDataUrl, FileType FROM ContentVersion WHERE Id IN :cdlIdList AND FileType IN :fileTypes];
     } catch (Exception e) {
         throw new AuraHandledException(e.getMessage());
     }
