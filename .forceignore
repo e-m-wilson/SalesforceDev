@@ -35,8 +35,8 @@ package.xml
 
 # Ignore Temporarily (depends on what I'm doing)
 **/pages/**
-**/classes/**
-**/aura/**
+#**/classes/**
+#**/aura/**
 **/staticresources/**
 
 **/digitalExperienceConfigs/**

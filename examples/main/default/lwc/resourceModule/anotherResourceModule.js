@@ -1,0 +1,1 @@
+export let myString = 'my message';

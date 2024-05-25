@@ -1,0 +1,9 @@
+<aura:component>
+    <!-- 
+    The two lines below are part of a demo for sharing JS code via an ES6 module. 
+    c:resourceModule is an ES6 module found in the LWC folder. It is being loaded 
+    into this Aura app and its exported function is being fired from Aura. 
+    -->
+    <c:resourceModule aura:id="myResource"/>
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+</aura:component>	

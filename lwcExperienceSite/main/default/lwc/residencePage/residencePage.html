@@ -4,9 +4,16 @@
         object-api-name={objectApiName}
         record-id={recordId}
         >
-        <lightning-output-field field-name={numberOfBaths}> </lightning-output-field>
-        <lightning-output-field field-name={numberOfBedrooms}> </lightning-output-field>
-        <lightning-output-field field-name={hasGarage}> </lightning-output-field>
+        <div class="slds-grid slds-gutter">
+            <div class="slds-col">
+                <lightning-output-field class="field" field-name={numberOfBaths}> </lightning-output-field>
+                <lightning-output-field class="field" field-name={numberOfBedrooms}> </lightning-output-field>
+            </div>
+            <div class="slds-col">
+                <lightning-output-field class="field" field-name={hasGarage}> </lightning-output-field>
+            </div>
+        </div>
+        
         </lightning-record-view-form>    
     </template>
 </template>
