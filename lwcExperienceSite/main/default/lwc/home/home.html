@@ -2,12 +2,14 @@
     <div lwc-ref="container">
 
         <template lwc:if={residences.data}>
-            <template for:each={residences.data} for:item="residence">
-                <lightning-card key={residence.Id}>
-                    <p>{residence.Name}</p>
-                    <lightning-button variant="brand" data-id={residence.Id} onclick={navToResidencePage} label="See More"></lightning-button>
-                </lightning-card>      
-            </template>
+            <div class="slds-grid slds-gutters slds-wrap">
+                <template for:each={residences.data} for:item="residence">
+                    <lightning-card key={residence.Id} class="slds-m-vertical_medium slds-col slds-size_1-of-1 slds-small-size_4-of-12 slds-medium-size_3-of-12 slds-large-size_2-of-12">
+                        <p>{residence.Name}</p>
+                        <lightning-button variant="brand" data-id={residence.Id} onclick={navToResidencePage} label="See More"></lightning-button>
+                    </lightning-card>  
+                </template>
+            </div>
         </template>
     </div>
 </template>

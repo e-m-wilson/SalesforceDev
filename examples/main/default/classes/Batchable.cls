@@ -8,7 +8,7 @@ public with sharing class Batchable implements Database.Batchable<SObject> {
      }
   
      public void execute(Database.BatchableContext BC, List<sObject> scope){
-        
+
         List<Opportunity> oppList = new List<Opportunity>();
         for(Sobject s : scope){
              oppList.add((Opportunity) s);
@@ -17,7 +17,5 @@ public with sharing class Batchable implements Database.Batchable<SObject> {
         delete oppList;
      }
   
-     public void finish(Database.BatchableContext BC){
-  
-     }
+     public void finish(Database.BatchableContext BC){}
 }
