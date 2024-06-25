@@ -16,6 +16,9 @@ export default class DebouncingExample extends LightningElement {
     handleQuery(e){
         let q = e.target.value;
 
+        // timeout will wait 2 seconds before setting the value of myQuery 
+        // this resets the timer each keystroke
+
         setTimeout( () => {
            this.myQuery = q; 
         }, 2000);
