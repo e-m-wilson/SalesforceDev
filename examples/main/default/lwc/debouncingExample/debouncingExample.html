@@ -1,0 +1,13 @@
+<template>
+    <lightning-input type="text" class="input" onchange={handleQuery}></lightning-input>
+    
+
+    <template lwc:if={allAccounts.data}>
+        <lightning-datatable
+                        hide-checkbox-column
+                        key-field="id"
+                        data={allAccounts.data}
+                        columns={columns}>
+                </lightning-datatable>
+        </template>
+</template>

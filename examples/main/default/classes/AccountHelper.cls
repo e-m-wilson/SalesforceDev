@@ -33,4 +33,5 @@ public with sharing class AccountHelper {
             throw new AuraHandledException(e.getMessage());
         }
     }
+    
 }

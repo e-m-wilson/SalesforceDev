@@ -1,7 +1,14 @@
 {
   "orgName": "Demo company",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi", "Communities"],
+  "features": [
+    "EnableSetPasswordInApi", 
+    "Communities",
+    "OmnistudioMetadata",
+    "OmnistudioRuntime",
+    "OmnistudioDesigner",
+    "Knowledge"
+  ],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true

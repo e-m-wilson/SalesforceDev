@@ -1,5 +1,6 @@
 <template>
     <lightning-card>
+        {myVariable.message}
         <ul>
             <template for:each={fruits} for:item='fruit'>
                 <li key={fruit}>{fruit}</li>
