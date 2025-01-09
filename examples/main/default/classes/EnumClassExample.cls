@@ -1,0 +1,1 @@
+public enum EnumClassExample {NorthEast, NorthWest, SouthEast, SouthWest}

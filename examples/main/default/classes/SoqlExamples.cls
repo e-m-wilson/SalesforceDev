@@ -3,6 +3,7 @@ public with sharing class SoqlExamples {
 
     }
 
+
     public static List<Account> fetchAccsByName(String name) {
         
         // Here we prevent SOQL injections by removing any single quotes

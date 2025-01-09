@@ -5,6 +5,7 @@
 // You can also execute the entire file by running the command:
 //     SFDX: Execute Anonymous Apex with Editor Contents
 
-string tempvar = 'Enter_your_name_here';
-System.debug('Hello World!');
-System.debug('My name is ' + tempvar);
+
+List<List<sObject>> records = [FIND 'Edge' RETURNING Account(Id, Name, AnnualRevenue), Contact(Id, FirstName, LastName)];
+List<Account> accList = records[0];
+List<Contact> conList = records[1];

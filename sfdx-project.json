@@ -20,7 +20,7 @@
   "name": "SalesforceDev",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "60.0",
+  "sourceApiVersion": "62.0",
   "packageAliases": {
     "lwcExperienceSite": "0Ho8b000000TNB1CAO",
     "examples": "0Ho8b000000PB0lCAG"
