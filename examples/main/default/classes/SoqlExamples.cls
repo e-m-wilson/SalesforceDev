@@ -6,7 +6,7 @@ public with sharing class SoqlExamples {
 
     public static List<Account> fetchAccsByName(String name) {
         
-        // Here we prevent SOQL injections by removing any single quotes
+        // Here we prevent SOQL injections by using setting escape character "/" on any single quotes
         String q = String.escapeSingleQuotes(name);
         q = '%' + q + '%';
 

@@ -25,4 +25,7 @@ public with sharing class EncapsulationExample {
             this.address = value;
         }
     }
+
+   
+
 }

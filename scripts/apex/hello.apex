@@ -6,6 +6,3 @@
 //     SFDX: Execute Anonymous Apex with Editor Contents
 
 
-List<List<sObject>> records = [FIND 'Edge' RETURNING Account(Id, Name, AnnualRevenue), Contact(Id, FirstName, LastName)];
-List<Account> accList = records[0];
-List<Contact> conList = records[1];

@@ -12,7 +12,7 @@ public with sharing class AbstractExampleChild extends AbstractExample {
     // here we override a virtual method:
     public override String printVirtualMessage() {
         // the super keyword can be used to call members of the parent class!
-        super.printVirtualMessage();
+        System.debug(super.printVirtualMessage());
         return 'I\'ve overridden the virtual method!';
     }
 }

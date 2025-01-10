@@ -1,6 +1,16 @@
 public with sharing class PolymorphismExample {
-    public PolymorphismExample() {
+    
+    Integer age;
+    String name;
+    
+    public PolymorphismExample(String n) {
+       
+        this(n, 84);
+    }
 
+    public PolymorphismExample(String n, Integer a) {
+        this.name = n;
+        this.age = a;
     }
 
     // polymorphism is achieved through method overriding and method overloading
