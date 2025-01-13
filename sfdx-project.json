@@ -15,6 +15,14 @@
       "versionNumber": "0.1.0.NEXT",
       "default": false,
       "versionDescription": ""
+    },
+    {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "codingChallengeSetup",
+      "default": false,
+      "package": "codingChallengeSetup",
+      "versionDescription": ""
     }
   ],
   "name": "SalesforceDev",
@@ -23,6 +31,7 @@
   "sourceApiVersion": "62.0",
   "packageAliases": {
     "lwcExperienceSite": "0Ho8b000000TNB1CAO",
-    "examples": "0Ho8b000000PB0lCAG"
+    "examples": "0Ho8b000000PB0lCAG",
+    "codingChallengeSetup": "0Hoaj0000000Jx7CAE"
   }
 }

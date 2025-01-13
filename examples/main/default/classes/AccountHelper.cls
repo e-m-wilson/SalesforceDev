@@ -14,14 +14,14 @@ public with sharing class AccountHelper {
         }
     }
 
-    @AuraEnabled(cacheable=true)
-    public static List<Account> getAllAccounts(){
-        try {
-            return [SELECT Name, AnnualRevenue FROM Account];
-        } catch (Exception e) {
-            throw new AuraHandledException(e.getMessage());
-        }
-    }
+    // @AuraEnabled(cacheable=true)
+    // public static List<Account> getAllAccounts(){
+    //     try {
+    //         return [SELECT Name, AnnualRevenue FROM Account WITH USER_MODE];
+    //     } catch (Exception e) {
+    //         //e.getInaccessibleFields();
+    //     }
+    // }
 
     @AuraEnabled
     public static void setAccountRatingToHot(String AccId){
@@ -34,7 +34,8 @@ public with sharing class AccountHelper {
         }
     }
     
-    public static void createDummyContact(List<Account> accList) {
+    @testVisible
+    private static void createDummyContact(List<Account> accList) {
 
         List<Contact> conList = new List<Contact>();
         for(Integer i = 0; i < accList.size(); i++) {

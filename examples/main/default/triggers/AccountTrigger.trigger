@@ -13,7 +13,7 @@ trigger AccountTrigger on Account (before insert, before update, before delete, 
 
         }
         when BEFORE_UPDATE {
-
+            
         }
         when BEFORE_DELETE {
 
@@ -21,6 +21,8 @@ trigger AccountTrigger on Account (before insert, before update, before delete, 
         when AFTER_INSERT {
             // AccountHelper.createDummyContact(Trigger.new);
             AccountHelper.startRecursion();
+
+
         }
         when AFTER_UPDATE {
 
