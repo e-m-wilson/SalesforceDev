@@ -34,4 +34,19 @@ public with sharing class AccountHelper {
         }
     }
     
+    public static void createDummyContact(List<Account> accList) {
+
+        List<Contact> conList = new List<Contact>();
+        for(Integer i = 0; i < accList.size(); i++) {
+            Contact con = new Contact(LastName = 'TestCon' + i);
+            con.AccountId = accList[i].Id;
+            conList.add(con);
+        }
+        Database.insert(conList);
+    }
+
+    public static void startRecursion() {
+        Contact c = new Contact(LastName = 'testingRecursion');
+        insert c;
+    }
 }
