@@ -1,0 +1,26 @@
+<apex:page controller="VisualforceAcceptUserInput" docType="html-5.0">
+
+    <apex:pageBlock>
+        <apex:pageBlockSection>
+            <apex:form>
+                <apex:input type="text" value="{!query}" required="true"/>
+                <apex:commandButton action="{!fetchRecords}" value="Search"/>
+
+                <apex:pageBlockTable value="{!accs}" var="acc" id="list">
+                    <apex:column >
+                        <apex:outputLink value="apex/visualforceAccountRecordPage">
+                            {!acc.name}
+                            <apex:param name="id" value="{!acc.id}"/>
+                        </apex:outputLink>
+                        
+                    </apex:column>
+                    <apex:column value="{!acc.annualRevenue}"/>
+                    <apex:column value="{!acc.industry}"/>
+
+                </apex:pageBlockTable>
+            </apex:form>
+            
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+</apex:page>
