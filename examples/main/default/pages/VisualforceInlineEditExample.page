@@ -1,0 +1,22 @@
+<apex:page standardController="Account" recordSetVar="accs">
+    <apex:form>
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!accs}" var="acc">
+                <apex:column headerValue="Account Name">
+                    <apex:outputField value="{!acc.name}">
+                        <apex:inlineEditSupport showOnEdit="updateRecords"/>
+                    </apex:outputField>
+                </apex:column>
+
+                <apex:column headerValue="Account Rating">
+                    <apex:outputField value="{!acc.rating}">
+                        <apex:inlineEditSupport showOnEdit="updateRecords"/>
+                    </apex:outputField>
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:pageBlockButtons>
+                <apex:commandButton value="Update Records" action="{!quicksave}" style="display:none" id="updateRecords"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

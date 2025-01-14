@@ -1,0 +1,27 @@
+<apex:page standardController="Account" extensions="VisualforceExtensionErrorExample" >
+
+
+    <apex:pageBlock>
+        <!-- 
+            This example will display an error from a standard method (required field missing)
+        -->
+        <apex:pageBlockSection>
+            <apex:form>
+                <apex:inputField value="{!account.rating}"/>
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:form>
+        </apex:pageBlockSection>
+
+        <!-- 
+            This example will display an error from a exception thrown in apex
+        -->
+        <apex:pageBlockSection>
+            <apex:form>
+                <apex:inputField value="{!account.rating}"/>
+                <apex:commandButton value="Save" action="{!saverecord}"/>
+            </apex:form>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:messages/>
+    <apex:pageMessages/>
+</apex:page>
