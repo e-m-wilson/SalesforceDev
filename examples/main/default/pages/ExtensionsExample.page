@@ -1,4 +1,4 @@
-<apex:page standardController="Case" extensions="MyVisualforceExtension">
+<apex:page standardController="Case" extensions="VisualforceStandardExtension">
     <apex:form>
         <apex:pageBlock>
             <apex:pageBlockSection>

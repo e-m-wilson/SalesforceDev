@@ -1,13 +1,17 @@
-public with sharing class MyVisualforceExtension {
-
+public with sharing class VisualforceStandardExtension {
+    
     private Case caseRecord;
 
-    public MyVisualforceExtension(ApexPages.StandardController stdController) {
+    public VisualforceStandardExtension(ApexPages.StandardController stdController) {
         this.caseRecord = (Case)stdController.getRecord();
     }
 
     public void markCaseAsHighPriority() {
         this.caseRecord.Priority = 'High';
         update this.caseRecord;
+    }
+
+    public void doStuff() {
+        // dummy for now
     }
 }

@@ -14,14 +14,12 @@ public with sharing class AccountHelper {
         }
     }
 
-    // @AuraEnabled(cacheable=true)
-    // public static List<Account> getAllAccounts(){
-    //     try {
-    //         return [SELECT Name, AnnualRevenue FROM Account WITH USER_MODE];
-    //     } catch (Exception e) {
-    //         //e.getInaccessibleFields();
-    //     }
-    // }
+    @AuraEnabled(cacheable=true)
+    public static List<Account> getAllAccounts(){
+      
+        return [SELECT Name, AnnualRevenue FROM Account];
+        
+    }
 
     @AuraEnabled
     public static void setAccountRatingToHot(String AccId){

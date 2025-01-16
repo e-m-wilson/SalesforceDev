@@ -1,0 +1,12 @@
+<apex:page standardController="Account" extensions="PartialPageRerenderingExamples">
+    <apex:form>
+        <apex:pageBlock>
+            <h2>The example below shows how to rerender content with commandLinks/commandButtons:</h2>
+            <apex:commandButton action="{!changeMessage}" value="Click me to rerender the paragraph!" reRender="message"/>
+            <apex:pageBlockSection id="message">
+                
+                <p>{!message}</p>
+            </apex:pageBlockSection>    
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

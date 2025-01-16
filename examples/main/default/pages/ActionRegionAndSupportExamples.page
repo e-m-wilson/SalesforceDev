@@ -1,0 +1,44 @@
+<apex:page standardController="Contact" extensions="PartialPageRerenderingExamples">
+
+    <apex:form>
+        <apex:pageBlock title="Edit Contact" mode="edit" id="pb">
+
+            <apex:pageBlockButtons>
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection>
+                <apex:inputField value="{!Contact.firstName}"/>
+                <apex:inputField value="{!Contact.lastName}"/>
+                
+                <!--
+                    If we ever want to perform logic in our controller based on user input, 
+                    we can use actionSupport to aid us. The example below will dynamically 
+                    change the displayed work city of the related account when changed.
+
+                    This will cause an error however if not wrapped with actionRegion. This is 
+                    because when actionSupport makes a server call to updateCity, the entire 
+                    form is submitted. If the other required fields are not filled out at that 
+                    time, then an error will occur. 
+
+                    This WILL cause an error if launched when required fields are missing:
+                    <apex:inputField value="{!contact.accountid}">
+                        <apex:actionSupport event="onchange" action="{!updateCity}"/>
+                    </apex:inputField> 
+
+                    Here is how to do it with actionRegion, thus avoiding the error:
+                -->
+                <apex:actionRegion>
+                    <apex:inputField value="{!contact.accountid}">
+                        <apex:actionSupport event="onchange" action="{!updateCity}" reRender="pb"/>
+                    </apex:inputField>    
+                </apex:actionRegion>
+                    
+              
+                <h2>Work City:</h2>
+                {!workcity}
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
