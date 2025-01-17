@@ -29,6 +29,8 @@
 
                     Here is how to do it with actionRegion, thus avoiding the error:
                 -->
+
+                
                 <apex:actionRegion>
                     <apex:inputField value="{!contact.accountid}">
                         <apex:actionSupport event="onchange" action="{!updateCity}" reRender="pb"/>
@@ -39,6 +41,20 @@
                 <h2>Work City:</h2>
                 {!workcity}
             </apex:pageBlockSection>
+
+            <h2>The example below shows how to rerender content with commandLinks/commandButtons:</h2>
+            <apex:commandButton action="{!changeMessage}" value="Click me to rerender the paragraph!" reRender="message"/>
+            <apex:pageBlockSection id="message">
+                <apex:actionRegion>
+                    
+                    <p>
+                        <apex:actionSupport event="onclick" reRender="message"/>
+                        {!message}</p>    
+                </apex:actionRegion>
+                
+            </apex:pageBlockSection> 
+            
+
         </apex:pageBlock>
     </apex:form>
 </apex:page>

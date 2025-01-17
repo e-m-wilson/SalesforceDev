@@ -1,0 +1,13 @@
+<apex:page controller="MyCustomVisualforceController" readOnly="true" renderAs="pdf">
+
+{!username}
+
+<apex:dataTable value="{!accs}" var="acc">
+    <apex:column>
+        <apex:outputText value="{!acc.name}" />
+    </apex:column>
+    <apex:column>
+        <apex:outputText value="{!acc.annualrevenue}" />
+    </apex:column>
+</apex:dataTable>
+</apex:page>

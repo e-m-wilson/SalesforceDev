@@ -1,0 +1,27 @@
+<apex:page controller="VisualforceRowActions">
+    <apex:form>
+        <apex:pageBlock>
+           
+                <apex:pageBlockTable value="{!accs}" var="acc" id="table">
+                    <apex:column value="{!acc.name}"/>
+                    <apex:column value="{!acc.rating}"/>
+                    <apex:column value="{!acc.annualRevenue}"/>
+
+                    <apex:column>
+                        <apex:outputLink value="apex/visualforceAccountRecordPage">
+                            View/Edit
+                            <apex:param name="id" value="{!acc.id}"/>
+                        </apex:outputLink>
+                    </apex:column>
+
+                    <apex:column>
+                        <apex:commandLink action="{!deleteRecord}" value="Delete">
+                            <apex:param name="accId" value="{!acc.id}" assignTo="{!accIdToDelete}"/>
+                        </apex:commandLink>
+                    </apex:column>
+
+                </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:messages></apex:messages>
+</apex:page>

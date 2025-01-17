@@ -11,7 +11,5 @@ public with sharing class VisualforceStandardExtension {
         update this.caseRecord;
     }
 
-    public void doStuff() {
-        // dummy for now
-    }
+    
 }

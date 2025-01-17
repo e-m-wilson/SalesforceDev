@@ -1,7 +1,8 @@
 <apex:page standardController="Account">
-
-    <h1>The current account is: {!account.name}</h1>
-    <apex:form >
-        <apex:commandButton value="Delete Record" action="{!delete}"/>
-    </apex:form>
+    
+    <apex:pageBlock>
+        <apex:outputLink value="/apex/RowActions" style="text-align=center">Back To List</apex:outputLink>
+        <apex:detail subject="{!account.id}" relatedList="false" title="true" inlineEdit="true"/>    
+    </apex:pageBlock>
+    
 </apex:page>

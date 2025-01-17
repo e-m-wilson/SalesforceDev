@@ -18,7 +18,7 @@ public with sharing class SecurityExamples {
 
          If no records are returned when setting enforceRootObjectCRUD to false, 
          then the returned SObjectAccessDecision.getRecords() will simply be an 
-         empty list. So don't try and assign these records to any variables or you 
+         empty list. So don't try and assign this to any variables or you 
          will get a 'List has no rows for assignment to SObject' error. 
         */
         SObjectAccessDecision decision = Security.stripInaccessible(AccessType.UPDATABLE, accList);
@@ -30,7 +30,7 @@ public with sharing class SecurityExamples {
 
         Account acc = new Account(Name = n, AnnualRevenue = annRevenue);
 
-        if(Schema.SObjectType.Account.isCreateable() || Schema.SObjectType.Account.fields.AnnualRevenue.isCreateable()) {
+        if(Schema.SObjectType.Account.isCreateable() && Schema.SObjectType.Account.fields.AnnualRevenue.isCreateable()) {
             insert acc;
         }
     }
