@@ -1,11 +1,23 @@
+<!--
+    Note that you can't use row actions + inline editing - at least your author has been 
+    unsuccessful. I'll put a bounty on it and buy you a dinner for anyone that figures it out. 
+-->
+
+
 <apex:page controller="VisualforceRowActions">
     <apex:form>
         <apex:pageBlock>
            
                 <apex:pageBlockTable value="{!accs}" var="acc" id="table">
-                    <apex:column value="{!acc.name}"/>
-                    <apex:column value="{!acc.rating}"/>
-                    <apex:column value="{!acc.annualRevenue}"/>
+                    <apex:column>
+                        <apex:inputField value="{!acc.Name}"/>
+                    </apex:column>
+                    <apex:column>
+                        <apex:inputField value="{!acc.Rating}"/>
+                    </apex:column>
+                    <apex:column>
+                        <apex:inputField value="{!acc.AnnualRevenue}"/>
+                    </apex:column>
 
                     <apex:column>
                         <apex:outputLink value="apex/visualforceAccountRecordPage">
@@ -19,8 +31,11 @@
                             <apex:param name="accId" value="{!acc.id}" assignTo="{!accIdToDelete}"/>
                         </apex:commandLink>
                     </apex:column>
-
                 </apex:pageBlockTable>
+                <apex:pageBlockButtons>
+                    <apex:commandButton value="Save" action="{!quicksave}"/>
+                    <apex:commandButton value="Cancel" action="{!cancel}"/>
+                </apex:pageBlockButtons>
         </apex:pageBlock>
     </apex:form>
     <apex:messages></apex:messages>

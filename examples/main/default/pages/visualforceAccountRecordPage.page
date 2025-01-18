@@ -1,8 +1,28 @@
-<apex:page standardController="Account">
+<apex:page standardController="Account" extensions="VisualforceAccountRecordPageExtension">
     
-    <apex:pageBlock>
+    <apex:pageBlock id="pb">
         <apex:outputLink value="/apex/RowActions" style="text-align=center">Back To List</apex:outputLink>
-        <apex:detail subject="{!account.id}" relatedList="false" title="true" inlineEdit="true"/>    
+        <apex:detail subject="{!account.id}" relatedList="false" title="true" inlineEdit="true"/>
+        <h2>Related Contacts:</h2>
+        <apex:form id="form1">
+            <apex:pageBlock>
+                <apex:dataTable value="{!conList}" var="con">
+                    <apex:column value="{!con.FirstName}"/>
+                    <apex:column value="{!con.LastName}"/>
+                    <apex:column value="{!con.email}"/>
+                    <apex:column value="{!con.phone}"/>    
+                    <apex:column>
+                        <a onclick="deleteRecord('{!con.id}')">Delete</a>
+                    </apex:column>
+                </apex:dataTable>
+            </apex:pageBlock>
+
+          
+            <apex:actionFunction action="{!deleteRecord}" name="deleteRecord" rerender="form1">
+                <apex:param name="conId" assignTo="{!conIdToDelete}" value="" />
+            </apex:actionFunction>
+        </apex:form>
+
     </apex:pageBlock>
-    
+    <apex:messages/>
 </apex:page>
