@@ -21,5 +21,10 @@
         }
         
         
+    },
+    handleLms : function(component, event) {
+        if (event != null && event.getParam("myMessage") != null) {
+            component.set("v.lmsMessage", event.getParam("myMessage"));
+        }
     }
 })

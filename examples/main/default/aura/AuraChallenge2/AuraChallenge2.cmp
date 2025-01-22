@@ -1,0 +1,20 @@
+<aura:component controller="MyAuraController">
+    <aura:attribute name="message" type="String" default="Message will appear here!"/>
+    <aura:attribute name="accList" type="Account[]"/>
+    <aura:attribute name="columns" type="Object"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:input name="input" type="text" aura:id="input"/>
+    <lightning:button label="Click me!" onclick="{!c.handleUserInput}"/>
+
+    <aura:if isTrue="{!v.accList}">
+        <lightning:datatable
+                    keyField="id"
+                    data="{!v.accList}"
+                    columns="{!v.columns}"
+                    hideCheckBoxColumn="true">
+        </lightning:datatable>    
+    </aura:if>
+    
+
+</aura:component>

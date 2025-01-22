@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:handler name="compEvent" event="c:myComponentEvent" action="{!c.handleEvent}"/>
+    <aura:attribute name="message" type="String"/>
+    {!v.message}
+    <c:MyAuraComponent></c:MyAuraComponent>
+</aura:component>

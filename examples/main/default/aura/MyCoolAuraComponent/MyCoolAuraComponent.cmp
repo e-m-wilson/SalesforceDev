@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="MyAuraController">
+    
+    <aura:attribute name="accList" type="Account[]"/>
+    <aura:attribute name="columns" type="Object"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card>
+        <lightning:datatable
+            columns="{!v.columns}"
+            data="{!v.accList}"
+            keyField="Id"
+            hideCheckboxColumn="false">
+        </lightning:datatable>
+    </lightning:card>
+   
+    <lightning:card>
+        <lightning:recordEditForm onsuccess="{!c.refreshTable}" objectApiName="Account">
+            <lightning:inputField fieldName="Name"/>
+            <lightning:inputField fieldName="Rating"/>
+            <lightning:inputField fieldName="Industry"/>
+            <lightning:button type="submit" label="Save"/>
+        </lightning:recordEditForm>
+    </lightning:card>    
+        
+
+    
+</aura:component>

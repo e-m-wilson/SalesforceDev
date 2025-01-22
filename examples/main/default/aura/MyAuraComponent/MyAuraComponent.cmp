@@ -1,0 +1,20 @@
+<aura:component controller="MyAuraController" implements="flexipage:availableForAllPageTypes">
+    
+    <aura:attribute name="errors" type="Object"/>
+    <lightning:card>
+        
+        
+        <aura:if isTrue="{!v.errors}">
+            <aura:iteration items="{!v.errors}" var="error">
+                <ui:message title="Error" severity="error" closable="true">
+                    {!error.message}
+                </ui:message>
+            </aura:iteration>
+        </aura:if>
+        <lightning:input type="text" aura:id="name" />
+        <lightning:button name="Submit" label="Save Record" onclick="{!c.saveRecord}"/>
+          
+    </lightning:card>
+        
+    
+</aura:component>

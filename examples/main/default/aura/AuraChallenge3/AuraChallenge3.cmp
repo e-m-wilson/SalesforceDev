@@ -1,0 +1,14 @@
+<aura:component controller="MyAuraController" implements="flexipage:availableForAllPageTypes">
+    
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+
+    name
+    <lightning:input name="input" type="text" aura:id="inputName"/>
+    rating
+    <lightning:input name="input" type="text" aura:id="inputRating"/>
+    employees
+    <lightning:input name="input" type="text" aura:id="inputEmployees"/>
+    annual revenue
+    <lightning:input name="input" type="text" aura:id="inputAnnualRevenue"/>
+    <lightning:button label="Click me!" onclick="{!c.handleUserInput}"/>
+</aura:component>

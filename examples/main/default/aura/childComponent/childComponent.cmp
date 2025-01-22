@@ -3,9 +3,14 @@
     <aura:registerEvent name="appEvent" type="c:myApplicationEvent"/>
     <aura:attribute name="valueFromParent" type="string"/>
 
+    <aura:attribute name="lmsMessage" type="String"/>
+    <lightning:messageChannel type="MyLmsChannel__c"
+            onMessage="{!c.handleLms}" scope="APPLICATION"/>
+
     <div class="child">
         <h1>This is my child component: labeled in red!</h1>
         <p>Value passed from parent: {!v.valueFromParent}</p>
+        <p>Value passed from LMS: {!v.lmsMessage}</p>
         <lightning:button variant="brand" label="Fire Component Event!" title="Fire Component Event!" onclick="{! c.handleClick }"/>
         <lightning:button variant="brand" label="Fire App Event!" title="Fire App Event!" onclick="{! c.handleClick }"/>    
         <lightning:button variant="brand" label="Fire Toast Event!" onclick="{! c.handleClick }"/>    

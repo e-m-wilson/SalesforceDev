@@ -4,5 +4,8 @@
     },
     doInit : function(component, event, helper) {
         helper.componentLoaded(component, event);
+    },
+    fireLMS : function(component, event, helper) {
+        helper.fireLMS(component, event);
     }
 })

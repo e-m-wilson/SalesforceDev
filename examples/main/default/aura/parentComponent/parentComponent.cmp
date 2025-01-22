@@ -1,8 +1,9 @@
 <aura:component implements="flexipage:availableForAllPageTypes">
     <aura:handler name="compEvent" event="c:myComponentEvent" action="{!c.eventHandler}"/>
     <aura:handler event="c:myApplicationEvent" action="{!c.eventHandler}"/>
-    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     <aura:attribute name="eventMessage" type="string"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:messageChannel type="MyLmsChannel__c" aura:id="myLmsChannel"/>
 
     <div class="parent">
         <h1>This is my parent component: labeled in purple!</h1>
@@ -12,5 +13,10 @@
             <h1>Message from event:</h1>
             <div>{! v.eventMessage }</div>    
         </aura:if>    
+
+        <div>
+            Button to fire LMS message to child component: 
+            <lightning:button variant="brand" label="Send LMS Message!" onclick="{!c.fireLMS}"/>
+        </div>
     </div>
 </aura:component>
