@@ -1,4 +1,4 @@
-<aura:component implements="flexipage:availableForAllPageTypes" controller="MyAuraController">
+<aura:component implements="flexipage:availableForAllPageTypes, forceCommunity:themeLayout" controller="MyAuraController">
     
     <aura:attribute name="accList" type="Account[]"/>
     <aura:attribute name="columns" type="Object"/>

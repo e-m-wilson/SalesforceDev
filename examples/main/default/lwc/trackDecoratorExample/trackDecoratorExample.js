@@ -4,6 +4,7 @@ export default class TrackDecoratorExample extends LightningElement {
     fruits = ['Apple', 'Banana', 'Cherry'];
     vegetables = ['Lettuce', 'Asparagus', 'Cabbage'];
 
+    @track
     myVariable = {message: 'hello world'};
 
     handleButtonClick() {

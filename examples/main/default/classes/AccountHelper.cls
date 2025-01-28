@@ -48,4 +48,10 @@ public with sharing class AccountHelper {
         Contact c = new Contact(LastName = 'testingRecursion');
         insert c;
     }
+
+    @AuraEnabled 
+    public static void createAccount(String name) {
+        Account a = new Account(Name=name);
+        insert a;
+    }
 }

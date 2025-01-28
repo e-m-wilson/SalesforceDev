@@ -7,7 +7,6 @@ export default class WireServiceExample extends LightningElement {
     allAccountsFromWiredFunction;
     error;
     myQuery;
-    allAccounts;
 
     // Wire service with property syntax. 
     @wire(getAccountList, {query : '$myQuery'})

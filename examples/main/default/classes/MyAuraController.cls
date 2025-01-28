@@ -48,4 +48,6 @@ public with sharing class MyAuraController {
             throw new AuraHandledException(e.getMessage());
         }
     }
+
+    
 }

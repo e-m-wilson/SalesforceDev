@@ -1,25 +1,20 @@
 public with sharing class QueueableExample implements Queueable {
     
-    // this class accepts a list of accounts during instantiation 
-    public QueueableExample(List<Account> accList) {
-        this.accList = accList;
+    // this class accepts a value during instantiation 
+    public QueueableExample(String imgURL) {
+      this.imgURL = imgURL;
     }
 
-    List<Account> accList;
+    private String imgURL;
+
 
     /*
         // You can paste the below code in an execute anonomous apex window to try out 
         // the class:
 
-        List<Account> accList = new List<Account>();
-        for(Integer i = 0; i<10; i++){
-            Account acc = new Account(name='testAccount' + i);
-            accList.add(acc);
-        }
+        // Here we actually instantiate the job and que it for execution (using developer jokes):
 
-        // Here we actually instantiate the job and que it for execution:
-
-        QueueableExample qe = new QueueableExample(accList);
+        QueueableExample qe = new QueueableExample('dev');
         Id jobId = System.enqueueJob(qe);
 
         // We can use the Apex Job Id that is returned from System.enqueueJob() to 
@@ -28,6 +23,11 @@ public with sharing class QueueableExample implements Queueable {
         AsyncApexJob jobInfo = [SELECT Status,NumberOfErrors FROM AsyncApexJob WHERE Id=:jobId];
     */
     public void execute(QueueableContext qc) {
-        insert this.accList;
+        
+        User u = [SELECT image_URL__c FROM USER WHERE Id = :UserInfo.getUserId()];
+        u.image_URL__c = this.imgURL;
+        update u;
+        
+        
     }
 }

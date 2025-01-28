@@ -1,7 +1,5 @@
 @RestResource(urlMapping='/AccountIntegration/*')
 global class IntegrationsExample {
-    
-    
 
     // Is an example of consuming a 3rd party RESTful service
     public static string getJoke() {
@@ -21,6 +19,8 @@ global class IntegrationsExample {
             return 'Failed to get joke.';
         }
     }
+
+   
 
     @httpGet
     global static Account getAccount() {

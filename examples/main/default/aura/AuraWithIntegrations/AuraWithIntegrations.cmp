@@ -1,0 +1,10 @@
+<aura:component controller="AuraWithIntegrations">
+
+    <aura:attribute name="imgLink" type="String"/>
+    <lightning:input label="Search for Pokemon" type="text" aura:id="input"/>
+    <lightning:button label="Set Favorite Pokemon" onclick="{!c.search}"/>
+
+    <aura:if isTrue="{!v.imgLink}">
+        <img src="{!v.imgLink}" alt="Pokemon" height="100" width="100"/>
+    </aura:if>
+</aura:component>
