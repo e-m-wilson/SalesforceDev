@@ -42,6 +42,8 @@ describe('c-wire-service-example', () => {
         const input = element.shadowRoot.querySelector('lightning-input');
         input.value = 'Some Account Name';
         input.dispatchEvent(new CustomEvent('change'));
+        const button = element.shadowRoot.querySelector('lightning-button');
+        button.click();
 
         const mockAccList = require('./data/_wireAdapter.json');
         getAccountList.emit(mockAccList);

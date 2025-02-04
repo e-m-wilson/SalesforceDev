@@ -4,11 +4,12 @@ import getContacts from '@salesforce/apex/ContactHelper.getContacts';
 export default class DatatableExample extends LightningElement {
 
     data;
+    wireData;
     
     @wire(getContacts)
     getConsWire(result) {
         if(result.data) {
-      
+            this.wireData = result;
 
             this.data = result.data.map((elem) => ({
                 ...elem,
@@ -31,4 +32,8 @@ export default class DatatableExample extends LightningElement {
         { label: 'Email', fieldName: 'Email'},
         { label: 'Account', fieldName: 'Account'}
     ];
+
+    renderedCallback() {
+        console.log(this.wireData);
+    }
 }
