@@ -13,4 +13,13 @@ public without sharing class ContactHelper {
             throw new AuraHandledException(e.getMessage());
         }
     }
+
+    @AuraEnabled(cacheable=true)
+    public static List<Contact> getContacts(){
+        try {
+            return [SELECT FirstName, LastName, Phone, Email, Account.Name FROM Contact];
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
 }

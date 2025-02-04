@@ -1,6 +1,6 @@
 <template>
     <div lwc-ref="container">
-
+        <a href="/login">login</a>
         <template lwc:if={residences.data}>
             <div class="slds-grid slds-gutters slds-wrap">
                 <template for:each={residences.data} for:item="residence">
@@ -12,4 +12,6 @@
             </div>
         </template>
     </div>
+
+    
 </template>

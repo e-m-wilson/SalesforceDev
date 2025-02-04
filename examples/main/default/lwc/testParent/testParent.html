@@ -1,0 +1,13 @@
+<template>
+    <template for:each={accs.data} for:item="acc">
+        <c-test-child key={acc.id} record={acc} ondelete={refreshCache}></c-test-child>
+    </template>
+
+    <lightning-record-edit-form
+        object-api-name={objectApiName}
+        onsuccess={refreshCache}>
+        <lightning-input-field field-name={accName}></lightning-input-field>
+        <lightning-input-field field-name={accAnnualRevenue}></lightning-input-field>
+        <lightning-button label="Save New Record" type="submit"></lightning-button>
+    </lightning-record-edit-form>
+</template>

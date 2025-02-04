@@ -14,7 +14,7 @@ public with sharing class CaseHelper {
     @AuraEnabled(cacheable=true)
     public static List<Case> getHighPriorityCases(){
         try {
-            return [SELECT CaseNumber, Priority, Status, Origin FROM Case WHERE Priority = 'High'];
+            return [SELECT AccountId, ContactId, Subject, Status FROM Case WHERE Priority = 'High' AND IsEscalated = True];
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
         }
@@ -39,6 +39,23 @@ public with sharing class CaseHelper {
                 updatedCases.add(c);
             }
             update updatedCases;
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
+
+    @AuraEnabled
+    public static void createCase(String origin, String status){
+        Case c = new Case(Origin=origin, Status = status, IsEscalated=true, Priority = 'High');
+        insert c;
+    }
+
+    @AuraEnabled
+    public static void closeCase(String id){
+        try {
+            Case c = [SELECT Id, Status FROM Case WHERE Id = :id LIMIT 1];
+            c.Status = 'Closed';
+            update c;
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
         }

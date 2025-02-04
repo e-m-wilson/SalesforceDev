@@ -31,4 +31,5 @@ export default class WireServiceExample extends LightningElement {
         let q = this.template.querySelector('.input').value;
         this.myQuery = q;
     }
+
 }

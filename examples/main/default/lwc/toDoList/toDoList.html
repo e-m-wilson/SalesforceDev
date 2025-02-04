@@ -1,0 +1,10 @@
+<template>
+    <template iterator:it={items}>
+        <div key={it}>
+            <p>{it.value}</p>
+            <lightning-button label="Remove Item" data-item={it.index} onclick={removeItem}></lightning-button>
+        </div>
+    </template>
+    <lightning-input label="New ToDo Item" lwc:ref="toDo"></lightning-input>
+    <lightning-button label="Add Item" onclick={addItem}></lightning-button>
+</template>

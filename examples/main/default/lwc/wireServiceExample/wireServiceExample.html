@@ -8,7 +8,8 @@
                         hide-checkbox-column
                         key-field="id"
                         data={allAccounts.data}
-                        columns={columns}>
+                        columns={columns}
+                        class="propertyDatatable">
                 </lightning-datatable>
         </template>
     <h2>This data table uses the wire service with function syntax.</h2>
@@ -16,6 +17,7 @@
                 hide-checkbox-column
                 key-field="id"
                 data={allAccountsFromWiredFunction}
-                columns={columns}>
+                columns={columns}
+                class="functionDatatable">
         </lightning-datatable>
 </template>

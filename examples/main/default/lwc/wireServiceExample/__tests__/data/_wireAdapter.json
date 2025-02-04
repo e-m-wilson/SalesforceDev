@@ -1,0 +1,21 @@
+{
+    "data": [
+        {
+            "Name": "Burlington Textiles Corp of America",
+            "AnnualRevenue": 350000000,
+            "Id": "001Ec00000j3lfwIAA"
+        },
+        {
+            "Name": "University of Arizona",
+            "Id": "001Ec00000j3lg2IAA"
+        },
+        {
+            "Name": "sForce",
+            "Id": "001Ec00000j3lg6IAA"
+        },
+        {
+            "Name": "Sample Account for Entitlements",
+            "Id": "001Ec00000j3lg7IAA"
+        }
+    ]
+}

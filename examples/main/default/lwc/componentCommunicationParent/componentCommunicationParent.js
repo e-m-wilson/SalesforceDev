@@ -12,4 +12,5 @@ export default class ComponentCommunicationParent extends LightningElement {
     handleChildEvent(e) {
         this.messageFromChild = e.detail;
     }
+
 }

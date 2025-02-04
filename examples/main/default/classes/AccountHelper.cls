@@ -17,7 +17,7 @@ public with sharing class AccountHelper {
     @AuraEnabled(cacheable=true)
     public static List<Account> getAllAccounts(){
       
-        return [SELECT Name, AnnualRevenue FROM Account];
+        return [SELECT Name, AnnualRevenue, ParentId FROM Account];
         
     }
 
@@ -53,5 +53,11 @@ public with sharing class AccountHelper {
     public static void createAccount(String name) {
         Account a = new Account(Name=name);
         insert a;
+    }
+
+    @AuraEnabled 
+    public static void deleteAccount(String id) {
+        Account acc = [SELECT Id FROM Account WHERE Id = :id];
+        delete acc;
     }
 }

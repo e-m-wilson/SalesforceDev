@@ -1,5 +1,5 @@
 <template>
-    <h2>Create new Cases:</h2>
+    <h1>Create new Cases:</h1>
     <lightning-record-edit-form
     object-api-name={objectApiName}
     onsuccess={handleRecordSave}>
@@ -12,7 +12,7 @@
         <lightning-button variant="brand" type="submit" label="Save New Record"></lightning-button>
     </lightning-record-edit-form>
 
-    <h2>Existing High Priority Cases:</h2>
+    <h1>Existing High Priority Cases:</h1>
     <template lwc:if={caseList.data}>
         <div class="slds-grid slds-gutters slds-wrap">
             <template for:each={caseList.data} for:item="caseRecord">

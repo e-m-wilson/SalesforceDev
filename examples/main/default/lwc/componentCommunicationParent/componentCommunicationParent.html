@@ -1,10 +1,11 @@
 <template>
     <div class="container">
         <h1>Parent to child example:</h1>
-        <lightning-input label="Enter the message for the child component." type="text" value={myInput} onchange={handleChange}></lightning-input>
+        <lightning-input label="Enter the message for the child component." type="text" onchange={handleChange}></lightning-input>
         <c-component-communication-child message={myInput} onmycustomevent={handleChildEvent}></c-component-communication-child>
 
         <h1>Child to parent example:</h1>
         <p>{messageFromChild}</p>
     </div>
+
 </template>

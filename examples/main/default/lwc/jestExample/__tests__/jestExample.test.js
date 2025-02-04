@@ -2,8 +2,16 @@ import { createElement } from 'lwc';
 import JestExample from 'c/jestExample';
 
 describe('c-jest-example - Testing Suite', () => {
+    
+    beforeEach(() => {
+            const element = createElement('c-jest-example', {
+                is: JestExample
+            });
+
+            document.body.appendChild(element);
+    });
+    
     afterEach(() => {
-        // The jsdom instance is shared across test cases in a single file so reset the DOM
         while (document.body.firstChild) {
             document.body.removeChild(document.body.firstChild);
         }
@@ -14,13 +22,8 @@ describe('c-jest-example - Testing Suite', () => {
     }
 
     it('This test method will check that the message is set properly both when the component loads and when the user clicks the button', async () => {
-        // Arrange
-        const element = createElement('c-jest-example', {
-            is: JestExample
-        });
-
-        // Act
-        document.body.appendChild(element);
+        
+        const element = document.body.firstChild;
 
         // Assert
         // const div = element.shadowRoot.querySelector('div');
