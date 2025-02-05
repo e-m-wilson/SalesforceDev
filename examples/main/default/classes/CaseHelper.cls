@@ -51,6 +51,16 @@ public with sharing class CaseHelper {
     }
 
     @AuraEnabled
+    public static void createCaseSubjectOrigin(String subject, String origin){
+        try {
+            Case newCase = new Case(Subject = subject, Origin = origin, Status = 'New');
+            insert newCase;
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+    }
+
+    @AuraEnabled
     public static void closeCase(String id){
         try {
             Case c = [SELECT Id, Status FROM Case WHERE Id = :id LIMIT 1];
