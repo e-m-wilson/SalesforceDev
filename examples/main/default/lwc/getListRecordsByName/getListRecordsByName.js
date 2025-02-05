@@ -25,8 +25,7 @@ export default class GetListRecordsByName extends LightningElement {
         // "-" is specifying a descending order. leave it off for ascending
         sortBy: ['-Account.AnnualRevenue'],
         // where uses GraphQL syntax:
-        // only eq is working as of now 2/5/24, but eq works and nothing else throws errors 
-        where: {and: [{ Rating: {eq: 'Hot'} }, { AnnualRevenue: {gt: 0}}, { AnnualRevenue: {ne: null} }]}
+        where: "{and: [{ Rating: {eq: 'Hot'} }, { AnnualRevenue: {gt: 0}}, { AnnualRevenue: {ne: null} }]}"
     })accounts({data, error}) {
         if(data) {
             this.accounts = data.records;
