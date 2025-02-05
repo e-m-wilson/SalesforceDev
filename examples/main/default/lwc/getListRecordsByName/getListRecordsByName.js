@@ -25,6 +25,7 @@ export default class GetListRecordsByName extends LightningElement {
         // "-" is specifying a descending order. leave it off for ascending
         sortBy: ['-Account.AnnualRevenue'],
         // where uses GraphQL syntax:
+        // valid field operators: https://developer.salesforce.com/docs/platform/graphql/guide/filter-fields.html#field-functions
         where: "{and: [{ Rating: {eq: 'Hot'} }, { AnnualRevenue: {gt: 0}}, { AnnualRevenue: {ne: null} }]}"
     })accounts({data, error}) {
         if(data) {
