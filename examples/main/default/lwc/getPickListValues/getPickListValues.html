@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+        <lightning-input type="text" label="Subject" lwc:ref="subject"></lightning-input>
+        <lightning-combobox
+            name="origin"
+            label="Origin"
+            options={originOptions}
+            lwc:ref="origin"
+            required></lightning-combobox>
+        <lightning-button label="Submit" onclick={createCase}></lightning-button>
+    </lightning-card>
+</template>
