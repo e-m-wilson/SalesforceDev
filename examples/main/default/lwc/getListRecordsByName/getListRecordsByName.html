@@ -3,8 +3,8 @@
     <lightning-button label="Search For Accounts" variant="brand" onclick={search}></lightning-button>
 
 
-    <template lwc:if={accounts}>
-        <template for:each={accounts} for:item="acc">
+    <template lwc:if={accounts.data}>
+        <template for:each={accList} for:item="acc">
             <p key={acc.Id}>{acc.fields.Name.value} {acc.fields.AnnualRevenue.value}</p>
         </template>
     </template>
